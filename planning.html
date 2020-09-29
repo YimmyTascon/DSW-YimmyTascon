@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>Planeación</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Planeación</h1>
+        <h2>Objetivo General</h2>
+        <p>
+            Conocer acerca de los estilos CSS3 y su uso en HTML5.
+        </p>
+        <h2>Objetivos específicos</h2>
+        <ul>
+            <li>Conocer los estilos internos, Externos y Selectores CSS.</li>
+            <li>Comprender el uso correcto de los estilos internos, Externos y Selectores CSS.</li>
+            <li>Entender la construccion de la sintaxis para css.</li>
+        </ul>
+
+        <h2>Materiales</h2>
+        <table>
+            <caption>Lista de materiales</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Enlace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CSS Básico</td>
+                    <td>Mozilla Developer Network (2020). CSS Básico.
+                        Recuperado de MDN web docs: <a
+                            href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics">https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics</a>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Selectores CSS</td>
+                    <td>Mozilla Developer Network (2020). CSS Selectors. Recuperado de MDN web docs:
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors</a>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>CSS interno, externo e inline</td>
+                    <td>Mozilla Developer Network. (2020). How CSS is structured. Recuperado de MDN web docs: <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured</a>.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Contenido</h2>
+        <p>
+            CSS son las siglas de Cascading style sheets, y hace referencia al lenguaje usado para describir la presentación y los estilos de un documento
+            o archivo HTML. Establece propiedades como ancho, alto, color de fondo, tipo de letra, bordes, entre otros. CSS3 es la ultima evolución de CSS y básicamente añade nuevas funcionalidades disponibles a CSS2.
+        </p>
+
+        <p>
+            Una declaración de regla CSS esta compuesta por un selector, seguido por un conjunto de pares de valores propiedad:valor, los cuales definen las reglas CSS que se aplicarán a los elementos seleccionados por el selector, como se ve en la siguiente imagen:
+            <img src="https://media.prod.mdn.mozit.cloud/attachments/2014/11/18/9461/012655e623bef579c9bd376e227bc648/css-declaration-small.png">
+            <br>Donde "Selector" es el selector, "color" es la propiedad y "red" es el valor de la propiedad. Todo esto conforman la declaración de unas reglas CSS.
+        </p>
+
+        <h3>Selectores CSS</h3>
+
+        <p>
+            CSS tiene varios tipos de selectores. A continuación se presentan tres selectores.
+        </p>
+
+        <h4>Selector de tipo clase</h4>
+        <p>
+            Es probablemente el selector más comúnmente usado. Selecciona todos los elementos que tienen un atributo class dado. Se define por medio de un punto (.) y luego el nombre de la clase.
+            Después, dentro de un par de llaves " { } " se establecen las reglas css del elemento.<br>
+            <code>.cuadro_rojo{<br>
+                background-color:red;<br>
+                width:200px;<br>
+                height:200px; <br>
+            }</code><br>
+            Con esto definido, para seleccionar los elementos html a los que se les aplicará las reglas css definicas por la clase "cuadro_rojo", dentro del atributo class del elemento html escribimos el nombre de la clase css:
+            <code>&lt;div class="cuadro_rojo"&gt;&lt;/div&gt;</code>
+        </p>
+
+        <h4>Selector por ID</h4>
+
+        <p>
+            Aplica unas reglas definidas css al elemento que tenga el atributo id con el valor definido en el selector css. Este se define con el carácter '#'', como en el siguiente ejemplo:<br>
+            <code>#cuadro_rojo{<br>
+                background-color:red;<br>
+                width:200px;<br>
+                height:200px; <br>
+            }</code>
+        </p>
+
+        <h4>Selector por Tipo de elemento</h4>
+
+        <p>
+            El selector por tipo de elemento html, es decir, por etiqueta html, selecciona los elementos en base al nombre del elemento como tal. Por ejemplo, en la siguiente imagen se define que todos los elementos <code>&lt;button&gt;</code> serán de color rojo y con un ancho y alto definido.<br>
+                <code>button {<br>
+                    background-color:red;<br>
+                    width:200px;<br>
+                    height:200px; <br>
+                }</code>
+        </p>
+
+        <h3>CSS internos</h3>
+        <p>
+            Hace referencia a los estilos definidos dentro de la etiqueta <code>&lt;style&gt;</code> en una página html. Por ejemplo en la siguiente imagen dentro de la etiqueta <code>&lt;style&gt;</code> se define una clase css donde se pinta un cuadro en rojo.
+        </p>
+
+        <p><code>&lt;style&gt; <br>
+            .cuadro_rojo{<br>
+                background-color:red;<br>
+                width:200px;<br>
+                height:200px; <br>
+        }<br>
+        &lt;style&gt;</code></p>
+
+
+        <h3>CSS externos</h3>
+        <p>
+            El css externo hace referencia a hojas de estilo que contienen reglas css y que están definidas en un archivo externo con formato .css. Por ejemplo, en un archivo llamado “cuadrorojo.css” se incluye el código <br>
+            <code>
+                .cuadro_rojo{<br>
+                    background-color:red;<br>
+                    width:200px;<br>
+                    height:200px; <br>
+            }</code><br>
+            Y desde el archivo html se importa este archivo y sus reglas css de la siguiente forma:
+            <code>&lt;link rel="stylesheet" href="estilocuadrorojo.css"&gt;</code><br>
+            De esta manera el código css queda almacenado en un archivo externo y hace que sea mas sencillo organizarlo.
+            El código anterior debe colocarse en la sección <code>&lt;head&gt;</code>
+        </p>
+
+        <h3>CSS en la línea (inline)</h3>
+        
+        <p>
+        El css en la línea (llamado inline en inglés) son reglas css que se escriben como parte del atributo style de un elemento. En el codigo siguiente, las reglas css se definen en el atributo style del elemento div.<br>
+        <code>&lt;div style="background-color: green; width:130px; display:flex"&gt;&lt;/div&gt;</code><br>
+        Como se puede ver, se establecen las propiedades css solo al elemento div.
+        </p>
+
+        <h3>Creación Mockup</h3>
+
+        <p>
+            <img src="Captura.PNG">
+        </p>
+
+        
+    </main>
+</body>
+
+</html>
